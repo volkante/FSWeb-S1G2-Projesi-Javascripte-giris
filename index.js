@@ -19,7 +19,13 @@ Aşağıdakileri yap:
 
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
-
+// let surucuYasi = 17;
+// if (surucuYasi > 18){
+//   console.log(true)
+// }
+// else {
+//   console.log(false)
+// }
 /*
 Görev 1b - Değerler (puanlamaya dahil değildir)
 
@@ -32,6 +38,13 @@ Aşağıdakileri yap:
    İPUCU: fonksiyon oluşturmaya gerek yok
 */
 
+// let birinciDeger = 53;
+// let ikinciDeger = 22;
+// if (birinciDeger > ikinciDeger) {
+//   birinciDeger = "degistim";
+//   console.log(birinciDeger)
+// }
+
 /*
 Görev 1c - String bir değeri Number'a dönüştürün (puanlamaya dahil değildir)
 
@@ -43,6 +56,10 @@ Aşağıdakileri yap:
    İPUCU: Number metoduna bakabilirsin
 */
 
+// let x = "1999";
+// let y = Number(x);
+// console.log(y);
+
 /*
 Görev 1d - Çarpma
  
@@ -53,7 +70,7 @@ Aşağıdakileri yaparak carpma isimli fonksiyonu tamamla:
 */
 
 function carpma(a, b) {
-  return a * b
+  return a * b;
 }
 // console.log (carpma(7,4))
 
@@ -97,37 +114,47 @@ OYUNUN KURALLARI: Makas Kağıdı yener| Kağıt Taşı yener | Taş Makas'ı ye
 // console.log(oyun("Taş","Makas"))
 
 function oyun(oyuncu, bilgisayar) {
-  if ((oyuncu == "Taş" && bilgisayar == "Kağıt")
-    || (oyuncu == "Kağıt" && bilgisayar == "Makas")
-    || (oyuncu == "Makas" && bilgisayar == "Taş")) { return ("Kaybettin!"); }
-  else if (oyuncu == bilgisayar) { return ("Beraberlik"); }
-  else { return ("Kazandın!") }
+  if (
+    (oyuncu == "Taş" && bilgisayar == "Kağıt") ||
+    (oyuncu == "Kağıt" && bilgisayar == "Makas") ||
+    (oyuncu == "Makas" && bilgisayar == "Taş")
+  ) {
+    return "Kaybettin!";
+  } else if (oyuncu == bilgisayar) {
+    return "Beraberlik";
+  } else {
+    return "Kazandın!";
+  }
 }
 // console.log(oyun("Makas", "Kağıt"))
 
 // Şimdi Taş, Kağıt, Makas oyununu bilgisayara karşı oynayalım!
-/*
-Öncelikle aşağıdakileri yap:
-1. Bilgisayarın seçimini rastgele oluşturacağım bir fonksiyon tanımla. Örn: 
-   function bilgisayarinSecimi() {
-   
-   }
-2. Fonsiyonun içinde bilgisayarın seçimi için bir değişken tanımla
-3. Math.random'ı kullanarak bilgisayarın seçimini oluşturun (Math.random 0-1 arasında bir değer verecek)
-4. Bu rastgele değeri "Taş", "Kağıt" veya "Makas"a dönüştüren bir koşul oluşturun
-5. Oluşan değeri geri dönün
 
-Şimdi kendi seçtiğin bir seçime karşı bilgisayarın rastgele oluşturduğu seçimi yukarıda yazdığın oyun fonsiyonu ile oynayın ve sonucu console'a yazdırın.
-Örn: console.log(oyun("Makas",bilgisayarinSecimi()))
-*/
+// Öncelikle aşağıdakileri yap:
+// 1. Bilgisayarın seçimini rastgele oluşturacağım bir fonksiyon tanımla. Örn:
+//    function bilgisayarinSecimi() {
+
+//    }
+// 2. Fonsiyonun içinde bilgisayarın seçimi için bir değişken tanımla
+// 3. Math.random'ı kullanarak bilgisayarın seçimini oluşturun (Math.random 0-1 arasında bir değer verecek)
+// 4. Bu rastgele değeri "Taş", "Kağıt" veya "Makas"a dönüştüren bir koşul oluşturun
+// 5. Oluşan değeri geri dönün
+
+// Şimdi kendi seçtiğin bir seçime karşı bilgisayarın rastgele oluşturduğu seçimi yukarıda yazdığın oyun fonsiyonu ile oynayın ve sonucu console'a yazdırın.
+// Örn: console.log(oyun("Makas",bilgisayarinSecimi()))
+
 function bilgisayarinSecimi() {
   let secim;
-  secim = Math.floor(Math.random() * 3)
-  if (secim === 0) { return "Taş" }
-  else if (secim === 1) { return "Kağıt" }
-  else { return "Makas" }
+  secim = Math.floor(Math.random() * 3);
+  if (secim === 0) {
+    return "Taş";
+  } else if (secim === 1) {
+    return "Kağıt";
+  } else {
+    return "Makas";
+  }
 }
-console.log(oyun("Makas", bilgisayarinSecimi()))
+console.log(oyun("Makas", bilgisayarinSecimi()));
 
 /* Görev 4 : Metrik Dönüştürücü */
 
@@ -140,9 +167,8 @@ Aşağdaki milDonusturucu fonksiyonunu aşağıdakileri kullanarak tamamla:
 */
 
 function milDonusturucu(km) {
-  return km * 0.621371
+  return km * 0.621371;
 }
-
 
 //Görev 4b - Santimetreden Feet
 /*
@@ -155,9 +181,9 @@ Google'da arama ipucu: "feet cm dönüştürme"
 */
 
 function feetDonusturucu(cm) {
-  return cm / 30.48
+  return cm / 30.48;
 }
-console.log(feetDonusturucu(5))
+console.log(feetDonusturucu(5));
 
 /* Görev 5 : 5 küçük maymun yatakta zıplamış şarkısını çocuklar için hazırladığımı varsayalım. https://www.youtube.com/watch?v=e4EJ34xnlxk */
 
@@ -173,11 +199,12 @@ Aşağıdakileri cocukSarkisi fonksiyonunda yap:
 */
 
 function cocukSarkisi(sayi) {
-  return sayi + " küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!"
+  return `${sayi} küçük maymun yatakta zıplamış, biri düşüp başını çarpmış, Anne doktoru aramış, Doktor çok kızmış: Bir daha yatakta zıplamak yok!`;
 }
 for (let i = 5; i > 0; i--) {
-  console.log(cocukSarkisi(i))
+  console.log(cocukSarkisi(i));
 }
+
 
 /* Görev 6 : Not Hesaplayıcı */
 
@@ -194,24 +221,21 @@ Aşağdakileri notHesapla fonksiyonunda yap.
  dönün
 */
 
+
 function notHesapla(not) {
-  if (not >= 90) { 
-    return "A aldın" 
-  }
-  else if (not >= 80) { 
-    return "B aldın" 
-  }
-  else if (not >= 70) { 
-    return "C aldın" 
-  }
-  else if (not >= 60) { 
-    return "D aldın" 
-  }
-  else { 
-    return "F aldın" 
+  if (not >= 90) {
+    return "A aldın";
+  } else if (not >= 80) {
+    return "B aldın";
+  } else if (not >= 70) {
+    return "C aldın";
+  } else if (not >= 60) {
+    return "D aldın";
+  } else {
+    return "F aldın";
   }
 }
-console.log(notHesapla(150))
+console.log(notHesapla(150));
 /* Bonus Çalışma: Sesli harf sayacı - Kaç tane sesli harf var? */
 
 /*
@@ -223,9 +247,21 @@ Aşağıdakileri sesliHarfSayaci fonskiyonunda yap.
 İPUCU - .includes() methoduna bakabilirsin. (https://www.w3schools.com/jsref/jsref_includes.asp)
 */
 
-function sesliHarfSayaci(/*buraya kodunu yazabilirsin*/) {
-  /*buraya kodunu yazabilirsin*/
+function sesliHarfSayaci(string) {
+  string = string.toLowerCase();
+  const sesliHarfler = ["a", "e", "ı", "i", "o", "ö", "u", "ü"];
+  let sesliHarfSayisi = 0;
+  for (let i = 0; i < string.length; i++) {
+    if (sesliHarfler.includes(string[i])) {
+      sesliHarfSayisi++;
+    }
+  }
+  return sesliHarfSayisi;
 }
+
+//console.log(sesliHarfSayaci("Volkan"))
+
+
 
 /* Lütfen bu satırın alt tarafını değiştirmeyin */
 function sa() {
